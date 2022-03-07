@@ -18,12 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->bigInteger('mobile_no')->nullable();
-            $table->Integer('rafreance_id')->nullable();
+            $table->unsignedBigInteger('rafreance_id')->nullable();
+            $table->foreign('rafreance_id')->references('id')->on('users');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
+       
     }
 
     /**

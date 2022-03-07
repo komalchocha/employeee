@@ -14,7 +14,27 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Emoloyee</th>
+      <th scope="col">count</th>
+      <th scope="col">References</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach($employes as $employee)
+    <tr>
+      <td>{{$employee->id}}</td>
+      <td>{{$employee->name}}</td>
+      <td>{{$employee->name}}</td>
+      <td>{{$employee->rafreance_id}}</td>
+    </tr>
+    @endforeach
+    
+  </tbody>
+</table>
                 </div>
             </div>
         </div>

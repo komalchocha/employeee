@@ -52,7 +52,7 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="mobile_no" class="col-md-4 col-form-label text-md-end">{{ __('Rafreance') }}</label>
+                            <label for="rafreance_id" class="col-md-4 col-form-label text-md-end">{{ __('Rafreance') }}</label>
                             <div class="col mb-6">
                                 <select class="form-control" name="rafreance_id" id="rafreance_id">
                                     <option value="">select Rafreance</option>
@@ -60,7 +60,7 @@
                                     <option value="{{ $register->id }}">{{ $register->name }}</option>
                                     @endforeach
                                 </select>
-                                @error('mobile_no')
+                                @error('rafreance_id')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
