@@ -18,11 +18,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'id',
         'name',
         'email',
         'password',
         'mobile_no',
-        'rafreance_id'
+        'rafreance_id',
+        'user_id'
     ];
 
     /**
@@ -43,4 +45,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function refaral()
+    {
+        return $this->belongsTo(User::class, 'rafreance_id', 'id');
+    }
+  
 }
